@@ -1,0 +1,7 @@
+{
+  "name": "SonopApp-nonnie-front-end",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
