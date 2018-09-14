@@ -1,0 +1,151 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Weekend Sign In List</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<table border=1>
+		<tr>
+			<th width="50%">Student</th>
+			<th>Friday Dinner</th>
+			<th>Satudray Brunch</th>
+			<th>Satudray Dinner</th>
+			<th>Sunday Breakfast</th>
+			<th>Sunday Lunch</th>
+			<th>Sunday Dinner</th>
+		</tr>
+		<tr id="blockName">
+			<td>HK</td>
+		</tr>
+		<tr *ngFor="let student of Hk">
+			<td>{{student.usrName}} {{student.usrSurname}}</td>
+			<td [style.background-color]="student.wsiFridayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayBrunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayBreakfast ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayLunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+		</tr>
+		<tr id="blockName">
+			<td>Weste Seniors</td>
+		</tr>
+		<tr *ngFor="let student of WS">
+			<td>{{student.usrName}} {{student.usrSurname}}</td>
+			<td [style.background-color]="student.wsiFridayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayBrunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayBreakfast ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayLunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+		</tr>
+		<tr id="blockName">
+			<td>Weste Juniors</td>
+		</tr>
+		<tr *ngFor="let student of WJ">
+			<td>{{student.usrName}} {{student.usrSurname}}</td>
+			<td [style.background-color]="student.wsiFridayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayBrunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayBreakfast ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayLunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+		</tr>
+		<tr id="blockName">
+			<td>Ooste Seniors</td>
+		</tr>
+		<tr *ngFor="let student of OS">
+			<td>{{student.usrName}} {{student.usrSurname}}</td>
+			<td [style.background-color]="student.wsiFridayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayBrunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayBreakfast ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayLunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+		</tr>
+		<tr id="blockName">
+			<td>Ooster Juniors</td>
+		</tr>
+		<tr *ngFor="let student of OJ">
+			<td>{{student.usrName}} {{student.usrSurname}}</td>
+			<td [style.background-color]="student.wsiFridayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayBrunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayBreakfast ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayLunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+		</tr>
+		<tr id="blockName">
+			<td>Noorde Seniors</td>
+		</tr>
+		<tr *ngFor="let student of NS">
+			<td>{{student.usrName}} {{student.usrSurname}}</td>
+			<td [style.background-color]="student.wsiFridayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayBrunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayBreakfast ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayLunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+		</tr>
+		<tr id="blockName">
+			<td>Noorde Juniors</td>
+		</tr>
+		<tr *ngFor="let student of NJ">
+			<td>{{student.usrName}} {{student.usrSurname}}</td>
+			<td [style.background-color]="student.wsiFridayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayBrunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayBreakfast ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayLunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+		</tr>
+		<tr id="blockName">
+			<td>Sentraal</td>
+		</tr>
+		<tr *ngFor="let student of Sr">
+			<td>{{student.usrName}} {{student.usrSurname}}</td>
+			<td [style.background-color]="student.wsiFridayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayBrunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayBreakfast ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayLunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+		</tr>
+		<tr id="blockName">
+			<td>Senaat</td>
+		</tr>
+		<tr *ngFor="let student of St">
+			<td>{{student.usrName}} {{student.usrSurname}}</td>
+			<td [style.background-color]="student.wsiFridayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayBrunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayBreakfast ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayLunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+		</tr>
+		<tr id="blockName">
+			<td>Verre Weste</td>
+		</tr>
+		<tr *ngFor="let student of VW">
+			<td>{{student.usrName}} {{student.usrSurname}}</td>
+			<td [style.background-color]="student.wsiFridayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayBrunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayBreakfast ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayLunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+		</tr>
+		<tr id="blockName">
+			<td>First Years</td>
+		</tr>
+		<tr *ngFor="let student of EJ">
+			<td>{{student.usrName}} {{student.usrSurname}}</td>
+			<td [style.background-color]="student.wsiFridayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayBrunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSaturdayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayBreakfast ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayLunch ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+			<td [style.background-color]="student.wsiSundayDinner ? '#119b05' : '#f53d3d'">{{student.usrName}}</td>
+		</tr>
+	</table>
+</ion-content>

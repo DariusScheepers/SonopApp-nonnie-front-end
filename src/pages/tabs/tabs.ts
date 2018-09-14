@@ -4,15 +4,14 @@ import { AboutPage } from '../about/about';
 //import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
 import { VerifyPage } from '../verify/verify';
+import { WeekendPage } from '../weekend/weekend'; 
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
-
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = VerifyPage;
+  tab1Root = VerifyPage;
+  tab2Root = WeekendPage;
 
   constructor() {
 

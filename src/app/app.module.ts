@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { VerifyPage } from '../pages/verify/verify';
 import { HttpModule} from '@angular/http';
+import { WeekendPage } from '../pages/weekend/weekend';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,7 +24,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TabsPage,
     LoginPage,
-    VerifyPage
+    VerifyPage,
+    WeekendPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TabsPage,
     LoginPage,
-    VerifyPage
+    VerifyPage,
+    WeekendPage
   ],
   providers: [
     StatusBar,
