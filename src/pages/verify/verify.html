@@ -2,7 +2,9 @@
 
   <ion-navbar>
     <ion-title>Verify accounts</ion-title>
-    <button ion-button item-end (click)="loadAccounts()">Refresh</button>
+    <ion-buttons end>
+      <button ion-button (click)="loadAccounts()">Refresh</button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -13,17 +15,20 @@
     <ion-card class="account card" *ngFor="let account of accounts" color="primary" [style.background-color]="account.usrIsHK ? '#f53d3d' : '#488aff'">
     <ion-card-header>  
         <ion-item color="primary">
-            <ion-label item-start><h1>{{account.usrName}} {{account.usrSurname}}</h1></ion-label>
+            <ion-label item-start><h1>{{account.fullName}}</h1></ion-label>
             <button ion-button item-end (click)="verifyAccount(account)">Verify</button>
             <button ion-button item-end (click)="discardAccount(account)">Discard</button>
         </ion-item>              
     </ion-card-header>
     <ion-card-content>   
         <ion-item color="primary">          
-          <ion-label>{{account.usrUsername}}</ion-label>
+          <ion-label>Username: {{account.usrUsername}}</ion-label>
         </ion-item>
         <ion-item color="primary">
-          <ion-label>{{account.usrEmailAddress}}</ion-label> 
+          <ion-label>Email address: {{account.usrEmailAddress}}</ion-label> 
+        </ion-item>
+        <ion-item color="primary">
+          <ion-label>Bediening Table: {{account.talName}}</ion-label> 
         </ion-item>
         <ion-item *ngIf="account.usrIsHK" color="primary">
           <ion-label>HK Member</ion-label>  

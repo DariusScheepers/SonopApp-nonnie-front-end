@@ -5,6 +5,7 @@ import { AboutPage } from '../about/about';
 import { HomePage } from '../home/home';
 import { VerifyPage } from '../verify/verify';
 import { WeekendPage } from '../weekend/weekend'; 
+import { SignOutPage } from '../sign-out/sign-out';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -12,6 +13,8 @@ import { WeekendPage } from '../weekend/weekend';
 export class TabsPage {
   tab1Root = VerifyPage;
   tab2Root = WeekendPage;
+  tab3Root = SignOutPage;
+
 
   constructor() {
 
