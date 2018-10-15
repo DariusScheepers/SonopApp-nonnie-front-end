@@ -22,7 +22,8 @@ export class SignOutPage {
 	dinnerMeal:any;
 	dinnerMealStatus:any;
 	seatingMapList:any = [];
-	count:any;
+	lunchCount:any;
+	dinnerCount:any;
     constructor(public navCtrl: NavController, public http: Http) {
 		this.getCurrentSignOut();
     }
@@ -34,7 +35,8 @@ export class SignOutPage {
 			(data) =>
 			{
 				this.seatingMapList = [];
-				this.count = 0;
+				this.lunchCount = 0;
+				this.dinnerCount = 0;
 				var jsonResp = JSON.parse(data.text()).JSONRes;
 				this.lunchMeal = jsonResp.lunchMeal;
 				this.dinnerMeal = jsonResp.dinnerMeal;
@@ -44,7 +46,9 @@ export class SignOutPage {
 				{
 					this.seatingMapList.push(element);
 					if (element[2] == 2)
-						this.count++;
+						this.lunchCount++;
+					if (element[3] == 2)
+						this.dinnerCount++;
 				}				
 			},
 			(error) =>
