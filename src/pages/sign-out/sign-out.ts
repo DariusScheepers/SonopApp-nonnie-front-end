@@ -1,14 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, ToastController } from 'ionic-angular';
 import { Http } from '../../http-api';
 import * as papa from 'papaparse';
-
-/**
- * Generated class for the SignOutPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { handleError } from '../../app-functions';
 
 @IonicPage()
 @Component({
@@ -24,7 +18,7 @@ export class SignOutPage {
 	seatingMapList:any = [];
 	lunchCount:any;
 	dinnerCount:any;
-    constructor(public navCtrl: NavController, public http: Http) {
+    constructor(public navCtrl: NavController, public http: Http, public toastCtrl: ToastController) {
 		this.getCurrentSignOut();
     }
 
@@ -53,7 +47,7 @@ export class SignOutPage {
 			},
 			(error) =>
 			{
-				alert("Error: " + error);
+				handleError(this.navCtrl,error,this.toastCtrl);
 			}
 		)
 	}
@@ -66,7 +60,6 @@ export class SignOutPage {
 			data: this.seatingMapList
 		});
 		
-		// Dummy implementation for Desktop download purpose
 		var blob = new Blob([csv]);
 		var a = window.document.createElement("a");
 		a.href = window.URL.createObjectURL(blob);

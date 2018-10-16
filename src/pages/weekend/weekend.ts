@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Http } from '../../http-api';
-import { File } from '@ionic-native/file';
 import * as papa from 'papaparse';
+import { handleError } from '../../app-functions';
 
 @IonicPage()
 @Component({
@@ -21,7 +21,7 @@ export class WeekendPage {
 	countSuL:any;
 	countSuD:any;
 
-	constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, private file: File) {
+	constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, public toastCtrl: ToastController) {
 		this.getWeekendSignIns();
 	}
 
@@ -61,7 +61,7 @@ export class WeekendPage {
 			},
 			(error) =>
 			{
-				alert("Error: " + error);
+				handleError(this.navCtrl,error,this.toastCtrl);
 			}
 		)
 	}

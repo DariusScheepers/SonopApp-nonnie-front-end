@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Http } from '../../http-api';
+import { presentToast, handleError } from '../../app-functions';
 
 @IonicPage()
 @Component({
@@ -27,7 +28,7 @@ export class VerifyPage {
 			},
 			(error) =>
 			{
-				alert("Error: " + error);
+				handleError(this.navCtrl,error,this.toastCtrl);
 			}
 		)
 	}
@@ -43,11 +44,11 @@ export class VerifyPage {
 			(data) =>
 			{
 				this.loadAccounts();
-				this.presentToast("Account Accepted");
+				presentToast(this.toastCtrl,"Account Accepted");
 			},
 			(error) =>
 			{
-				alert("Error: " + error);				
+				handleError(this.navCtrl, error, this.toastCtrl);				
 			}
 		)
 	}
@@ -63,24 +64,12 @@ export class VerifyPage {
 			(data) =>
 			{
 				this.loadAccounts();
-				this.presentToast("Account Discarded");
+				presentToast(this.toastCtrl,"Account Discarded");
 			},
 			(error) =>
 			{
-				alert("Error: " + error);
+				handleError(this.navCtrl, error, this.toastCtrl);
 			}
 		)
 	}
-	
-	presentToast(text){
-		let toast = this.toastCtrl.create(
-		  {
-			message: text,
-			duration: 1500,
-			position: 'bottom',
-			dismissOnPageChange: false
-		  }
-		);
-		toast.present();
-	  }
 }

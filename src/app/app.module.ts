@@ -5,9 +5,6 @@ import { MyApp } from './app.component';
 import { Http } from '../http-api';
 import { File } from '@ionic-native/file';
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { VerifyPage } from '../pages/verify/verify';
@@ -21,9 +18,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
     TabsPage,
     LoginPage,
     VerifyPage,
@@ -38,9 +32,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
     TabsPage,
     LoginPage,
     VerifyPage,
