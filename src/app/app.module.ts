@@ -11,6 +11,8 @@ import { VerifyPage } from '../pages/verify/verify';
 import { HttpModule} from '@angular/http';
 import { WeekendPage } from '../pages/weekend/weekend';
 import { SignOutPage } from '../pages/sign-out/sign-out';
+import { VerifyEditPage } from '../pages/verify-edit/verify-edit';
+import { VerifyEditWeekendPage } from '../pages/verify-edit-weekend/verify-edit-weekend';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +24,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     VerifyPage,
     WeekendPage,
-    SignOutPage
+    SignOutPage,
+    VerifyEditPage,
+    VerifyEditWeekendPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     VerifyPage,
     WeekendPage,
-    SignOutPage
+    SignOutPage,
+    VerifyEditPage,
+    VerifyEditWeekendPage
   ],
   providers: [
     StatusBar,
